@@ -302,7 +302,7 @@ const Register = () => {
         </div>
       )}
       
-      {!captureComplete ? (
+      {!captureComplete && (
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -347,14 +347,16 @@ const Register = () => {
             {isSending ? "Processing..." : "Register Face"}
           </button>
         </div>
-      ) : (
-        <button
-          onClick={handleReset}
-          className="w-full py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700"
-        >
-          Register Another Face
-        </button>
-      )}
+      ) 
+      // : (
+      //   <button
+      //     onClick={handleReset}
+      //     className="w-full py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700"
+      //   >
+      //     Register Another Face
+      //   </button>
+      // )
+      }
     </div>
   );
 };
